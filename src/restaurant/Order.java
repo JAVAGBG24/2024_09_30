@@ -5,6 +5,7 @@ public class Order {
     private int tableNumber;
     private double price;
 
+
     public Order(String dishName, int tableNumber, double price) {
         this.dishName = dishName;
         this.tableNumber = tableNumber;
