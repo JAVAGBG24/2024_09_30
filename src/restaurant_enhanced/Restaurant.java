@@ -13,7 +13,7 @@ public class Restaurant {
 
     public void addOrder(Order order) {
         orders.add(order);
-        System.out.println("Added: " + order.toString());
+        System.out.println("Added: " + order);
     }
 
     public BigDecimal calculateTotal() {
@@ -21,29 +21,16 @@ public class Restaurant {
                 .map(Order::getPrice)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
 
-       /* double total = 0;
-        for (restaurant.Order order : orders) {
-            total += order.getPrice();
-        }
-        return total;*/
-
+        /*
+        Om vi skulle haft int istället för BigDecimal hade vi returnerat:
+        return orders.stream()
+                .mapToInt(Order::getPrice)
+                .sum();
+        */
     }
 
     public List<Order> getOrders() {
         return orders;
     }
-
-
-    public void displayOrders() {
-        if (orders.isEmpty()) {
-            System.out.println("No orders yet.");
-        } else {
-            for (Order order : orders) {
-                System.out.println(order.toString());
-            }
-        }
-    }
-
-
 }
 

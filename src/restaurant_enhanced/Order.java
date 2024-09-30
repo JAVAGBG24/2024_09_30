@@ -40,6 +40,5 @@ public class Order {
         return "Table " + tableNumber + ": " + dishName + " " + price + " SEK";
     }
 
-
 }
 
