@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 
 record Item(String name, String type, int amount) {
     public Item(String name) {
@@ -17,8 +17,27 @@ public class Main {
         //shoppingArray[2] = "2 apples";
         shoppingArray[2] = new Item("apples", "FRUIT", 2);
 
-        System.out.println(Arrays.toString(shoppingArray));
+        //System.out.println(Arrays.toString(shoppingArray));
+
+        ArrayList itemList = new ArrayList();
 
 
+        ArrayList<Item> shoppingList = new ArrayList<>();
+        shoppingList.add(new Item("Bregott"));
+        //shoppingList.add("Cream");
+        shoppingList.add(new Item("apples", "FRUIT", 2));
+
+        System.out.println(shoppingList);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
